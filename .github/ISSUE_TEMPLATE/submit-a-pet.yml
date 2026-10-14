@@ -1,0 +1,61 @@
+name: Submit a pet
+description: Bring a pet you built. It stays a stranger's pet until a farm checks and adopts it.
+title: "<pet-program>-v<version>: <its job>"
+labels: ["pet", "community"]
+body:
+  - type: input
+    id: program
+    attributes:
+      label: Pet program name and version
+      placeholder: photo-roost-v1.0
+    validations:
+      required: true
+  - type: input
+    id: icon
+    attributes:
+      label: Pet program icon (the character)
+      placeholder: Photo Dodo
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: Its job, in one or two plain sentences
+    validations:
+      required: true
+  - type: textarea
+    id: uses
+    attributes:
+      label: Programs and tools it uses
+      description: Third-party programs it runs, and its own tools.
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permissions it needs
+      description: Exact folders, which of R W X, network access, and limits. Ask for as little as possible.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source code link
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: MIT
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: It follows the Pet Program Framework, or I say which parts it does not yet.
+          required: true
+        - label: It contains no secrets, collects no data and phones home to nobody, or I say exactly what it sends and where.
+          required: true
+        - label: I made it, or I have the right to share it under the license above.
+          required: true
